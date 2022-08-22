@@ -14,6 +14,15 @@ h1 {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: #000000;
 }
+h4{
+  padding: 10px;
+}
+main{
+  margin-top: 2em;
+  margin-bottom: 5em;
+
+}
+
 li {
   text-decoration: none;
   list-style-type: none;
@@ -23,7 +32,7 @@ li {
   color: #000000;
 }
 a {
-  font-size: 3em;
+  font-size: 2em;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   text-decoration: none;
   color: #000000;
@@ -41,6 +50,9 @@ header nav ul li {
   text-decoration: none;
   padding: 10px;
 }
+ button:hover {
+  transform: scale(1.1);
+ }
 .pie-foto {
   font-size: 20px;
   font-weight: large;
@@ -49,14 +61,14 @@ header nav ul li {
   color: #000000;
 }
 .header {
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  text-justify: auto;
-  justify-content: center;
-  padding: 10px;
-  
+
 }
 .headernavul {
   list-style: none;
+  flex-wrap: wrap;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -64,6 +76,7 @@ header nav ul li {
 .headernavulli {
   margin: 0 30px 15px 0;
   text-align: center;
+  display: inline-block;
 }
 .headernavullibutton {
   border-style: inherit;
@@ -92,21 +105,22 @@ footer p a img {
   flex-direction: row;
   justify-content: center;
 }
-main ul div li img {
+main  div  img {
   width: 200px;
   height: 200px;
   margin-left: 5em;
 }
+main  div  img:hover {
+  transform: scale(1.1);
+}
+
 .text {
   color: #000000;
   font-size: 20px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-.video {
-  width: 50%;
-  display: flex;
-  float: right;
-}
+
+
 form fieldset legend {
   width: 150px;
   padding: 0;
@@ -119,6 +133,7 @@ form {
   justify-content: center;
   text-align: center;
 }
+
 .nn {
   font-size: large;
   width: 150px;
@@ -133,4 +148,199 @@ fieldset {
   display: flex;
   flex-direction: column;
 }
+.productos {
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-template-columns: repeat(4, 200px);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "productos_card1 productos_card2 productos_card3 productos_card4"
+    "productos_card5 productos_card6 productos_card7 productos_card8"
+    "productos_card9 productos_card10 productos_card11 productos_card12";
+  grid-gap: 20px;
+  margin-top: 2em;
+  margin: auto;
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+.productos_card1 {
+  grid-area: productos_card1;
+}
+.productos_card2 {
+  grid-area: productos_card2;
+}
+.productos_card3 {
+  grid-area: productos_card3;
+}
+.productos_card4 {
+  grid-area: productos_card4;
+}
+.productos_card5 {
+  grid-area: productos_card5;
+}
+.productos_card6 {
+  grid-area: productos_card6;
+}
+.productos_card7 {
+  grid-area: productos_card7;
+}
+.productos_card8 {
+  grid-area: productos_card8;
+}
+.productos_card9 {
+  grid-area: productos_card9;
+}
+.productos_card10 {
+  grid-area: productos_card10;
+}
+.productos_card11 {
+  grid-area: productos_card11;
+}
+.productos_card12 {
+  grid-area: productos_card12;
+}
+.productos_img {
+  width: 100%;
+  height: 250px;
+  filter: brightness(0, 12);
+  -webkit-filter: brightness(0, 12);
+}
+.productos_main {
+  width: 100%;
+  background-color: #000000;
+}
+.productos_titulo {
+  color: darkgoldenrod;
+  text-align: center;
+}
+.productos_parrafo {
+  font-size: iren;
+  color: rgb(2, 24, 44);
+  padding: 10px;
+  text-align: center;
+}
 
+@media screen and (min-width: 320px) {
+  .productos {
+    height: auto;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(12, auto);
+    grid-template-areas:
+      "productos_card1"
+      "productos_card2"
+      "productos_card3"
+      "productos_card4"
+      "productos_card5"
+      "productos_card6"
+      "productos_card7"
+      "productos_card8"
+      "productos_card9"
+      "productos_card10"
+      "productos_card11"
+      "productos_card12";
+  }
+}
+@media screen and (min-width: 768px) {
+  .productos {
+    height: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+      "productos_card1 productos_card2"
+      "productos_card3 productos_card4"
+      "productos_card5 productos_card6"
+      "productos_card7 productos_card8"
+      "productos_card9 productos_card10"
+      "productos_card11 productos_card12";
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .productos{
+    height: auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "productos_card1 productos_card2 productos_card3 productos_card4"
+    "productos_card5 productos_card6 productos_card7 productos_card8"
+    "productos_card9 productos_card10 productos_card11 productos_card12";
+  }
+}
+
+.text {
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(1, auto);
+  grid-template-areas:
+    "texto_card1 texto_card2 texto_card3";
+  grid-gap: 20px;
+  margin-top: 20px;
+  margin: auto;
+}
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+.texto_card1 {
+  grid-area: texto_card1;
+}
+.texto_card2 {
+  grid-area: texto_card2;
+}
+.texto_card3 {
+  grid-area: texto_card3;}
+  .texto_titulo {
+    color: darkgoldenrod;
+    text-align: center;
+  }
+  .texto_parrafo {
+    font-size: iren;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+  }
+  @media screen and (min-width: 480px) {
+    .text {
+      height: auto;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(3, auto);
+      grid-template-areas:
+        "texto_card1"
+        "texto_card2"
+        "texto_card3"
+;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .text {
+      height: auto;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(3, auto);
+      grid-template-areas:
+        "texto_card1" 
+        "texto_card2"
+        "texto_card3"
+        
+       ;
+    }
+  }
+  
+  @media screen and (min-width:1200px) {
+    .text{
+      height: auto;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(1, auto);
+      grid-template-areas: "texto_card1 texto_card2 texto_card3 "
+      ;
+    }
+  }
